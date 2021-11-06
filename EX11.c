@@ -1,14 +1,14 @@
-#include <stdio.h> //bibliotÈca padr„o
-#include <math.h>  //bibliotÈca para operaÁıes matem·ticas
+#include <stdio.h> //bibliot√©ca padr√£o
+#include <math.h>  //bibliot√©ca para opera√ß√µes matem√°ticas
 
 int main()
 {
-	//VARI¡VEIS
+	//VARI√ÅVEIS
 	int 		matA[3][4],		//matriz A
-				matB[4][3],		//matriz B
-				i, j;			//contadores
+			matB[4][3],		//matriz B
+			i, j;			//contadores
 	
-	//INÕCIO
+	//IN√çCIO
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 4; j++)
