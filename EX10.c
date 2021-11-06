@@ -7,7 +7,7 @@ void main()
 			vet[2] = {0, 0},	//vetor de armazenamento
 			i, j, k;			//contadores
 	
-	//INÕCIO
+	//IN√çCIO
 	for (i = 0; i < 20; i++)
 	{
 		for (j = 0; j < 20; j++)
@@ -15,41 +15,43 @@ void main()
 			printf("Elemento [%d] [%d]: ", i , j);
 			scanf("%d", &mat[i][j]);
 			
-			if (mat[i][j] == 0)
+			if (mat[i][j] == 0 )
 			{
 				vet[0] ++;
 			}	//fim if
 		}	//fim for
 	}	//fim for
 
-	//verifica se È matriz triangular
-	for (i = 19; i >= 0; i--)
+	//verifica se √© matriz triangular
+	for (i = 0; i < 20; i++)
 	{
-		k = 19;
-		k = k - i;
-		for (j = 0; j < k; j++)
+		for (j = 0; j <= i; j++)
 		{
-			if (mat[k][j] == 0 && j != k)
+			printf("%d", mat[i][j]);
+			if (mat[i][j] == 0)
 			{
 				vet[1] ++;
+				printf(" - %d", vet[1]);
 			}	//fim if
-			else
+			else if (mat[i][j] != 0 && i != j)
 			{
 				vet[0] ++;
-			}
-		}	//fim for	
+			}	//fim else
+		}	//fim for
+		printf("\n");
 	}	//fim for
 	
 	printf("\n");
 	if (vet[1] == vet[0])
 	{
-		printf("Matriz tri‚ngular!\n");
-	}
+		printf("Matriz tri√¢ngular!\n");
+	}	//fim if
 	else
 	{
-		printf("Matriz normal!\n");
-	}
+		printf("Matriz normal!\n", vet[0], vet [1]);
+	}	//fim else
 	
+	//imprime a matriz
 	for (i = 0; i < 20; i++)
 	{
 		for (j = 0; j < 20; j++)
@@ -58,4 +60,4 @@ void main()
 		}
 		printf("\n");
 	}	//fim for
-}
+}	//fim main
