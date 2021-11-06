@@ -1,27 +1,27 @@
-#include <stdio.h> //bibliotÈca padr„o
-#include <math.h>  //bibliotÈca para operaÁıes matem·ticas
+#include <stdio.h> //bibliot√©ca padr√£o
+#include <math.h>  //bibliot√©ca para opera√ß√µes matem√°ticas
 
-void FuncDeci (int matriz, int * vet)
+void FuncDeci (int matriz[10][8], int vet[2], int i, int j)
 {
-	if (vet [0] < matriz || vet [0] == 0)	//maior
+	if (vet [0] < matriz[i][j] || vet [0] == 0)	//maior
 	{
-		vet[0] = matriz;
-	}
+		vet[0] = matriz[i][j];
+	}	//fim if
 	
-	if (vet [1] > matriz || vet [1] == 0)	//menor
+	if (vet [1] > matriz[i][j]|| vet [1] == 0)	//menor
 	{
-		vet[1] = matriz;
-	}
-}	//fim funÁ„o
+		vet[1] = matriz[i][j];
+	}	//fim if
+}	//fim fun√ß√£o
 
 int main()
 {
-	//VARI¡VEIS
+	//VARI√ÅVEIS
 	int			matriz[10][8],		//matriz
 				vet[2] = {0, 0},	//vetor que armazena o maior e o menor
 				i, j;				//contadores
 		
-	//INÕCIO
+	//IN√çCIO
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 8; j++)
@@ -29,7 +29,7 @@ int main()
 			printf("Elemento [%d] [%d]: ", i, j);
 			scanf("%d", &matriz[i][j]);
 			
-			FuncDeci (matriz[i][j], &vet);
+			FuncDeci (matriz, vet, i, j);
 		}	//fim for
 	}	//fim for
 	
