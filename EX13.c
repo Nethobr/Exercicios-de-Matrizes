@@ -1,7 +1,7 @@
 #include <stdio.h>
 void FuncTemp (int mat[10][10], int lin, int col)
 {
-	int		alet,		//aleatórios
+	int		alet,		//aleatÃ³rios
 			i, j;		//contadores
 	
 	for (i = 0; i < lin; i++)
@@ -24,11 +24,11 @@ void FuncTemp (int mat[10][10], int lin, int col)
 			}	//fim if else
 		}	//fim for
 	}	//fim for
-}	//fim função que gera volores aleatórios
+}	//fim funÃ§Ã£o que gera volores aleatÃ³rios
 
 void ProcdTabTemp (int mat[10][10], int lin, int col)
 {
-	int		alet,		//aleatórios
+	int		alet,		//aleatÃ³rios
 			i, j;		//contadores
 			
 	printf("Tabela de tempo de cidade para cidade:\n\n");
@@ -58,7 +58,7 @@ void QuestC (int mat[10][10], int lin, int col)
 		destino,		
 		soma = 0;		
 	
-	//INÍCIO
+	//INÃCIO
 	printf("----------\n");
 	printf("Para encerar o planejamento da roda, digite '7'!\n\n");
 	printf("Origem: ");
@@ -105,7 +105,7 @@ void QuestB (int mat[10][10], int lin, int col)
 	//VAR'S
 	int i, j, k, l;		//contadores
 	
-	//INÍCIO
+	//INÃCIO
 	printf("\n");
 	printf("Triangulo inferior\n");
 	for (i = 0; i < lin; i++)
@@ -145,33 +145,33 @@ void QuestA (int mat[10][10])
 	//VAR'S
 	int origem, destino; 	
 	
-	//INÍCIO
+	//INÃCIO
 	printf("\nEscolha a cidade origem e destino\n");
 	printf("Origem (O): ");
 	scanf("%d", &origem);
 	printf("Destino (D): ");
 	scanf("%d", &destino);
 	
-	printf("Tempo necessário: %dh", mat[origem][destino]);
+	printf("Tempo necessÃ¡rio: %dh", mat[origem][destino]);
 }	//fim procedimento
 
 void main()
 { 
 	//VAR'S
-	int 	mat[10][10],	//matriz
-			lin = 7,		//linha
-			col = 7,		//coluna
-			op;				//opção
+	int 	mat[10][10],		//matriz
+			lin = 7,	//linha
+			col = 7,	//coluna
+			op;		//opÃ§Ã£o
 			
-	//INÍCIO
-	//adiciona valores aleatórios para a matriz
+	//INÃCIO
+	//adiciona valores aleatÃ³rios para a matriz
 	FuncTemp (mat, lin, col);	
 		
 	//Exibe os valores que foram adiocionados na matriz
 	ProcdTabTemp (mat, lin, col);	
 	
-	//Questões
-	printf("\nDigite a opção: ");
+	//QuestÃµes
+	printf("\nDigite a opÃ§Ã£o: ");
 	scanf("%d", &op);
 	switch (op)
 	{
