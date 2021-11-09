@@ -155,7 +155,7 @@ void QuestA (int mat[10][10])
 	printf("Tempo necessário: %dh", mat[origem][destino]);
 }	//fim procedimento
 
-void main()
+int main()
 { 
 	//VAR'S
 	int 	mat[10][10],		//matriz
